@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">Login</string>
+    <string name="username_label">Username : </string>
+    <string name="username_hint">Enter username here!</string>
+    <string name="password_label">Password : </string>
+    <string name="password_hint">Enter Password here!</string>
+    <string name="login_button_label">Login</string>
+
+    <string name="welcome_label">I am good to go Android!!</string>
+    <string name="logout_button_label">Logout</string>
+
+
 </resources>

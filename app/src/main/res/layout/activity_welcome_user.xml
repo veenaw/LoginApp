@@ -14,7 +14,7 @@
         android:id="@+id/welcome_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="I am good to go Android!! " />
+        android:text="@string/welcome_label" />
 
     <Button
         android:id="@+id/logout_button"
@@ -22,7 +22,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="22dp"
         android:onClick="logMeOut"
-        android:text="Logout"
+        android:text="@string/logout_button_label"
         />
 
 
