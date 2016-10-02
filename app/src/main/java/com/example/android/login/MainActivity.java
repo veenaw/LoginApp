@@ -71,6 +71,7 @@ public class MainActivity extends AppCompatActivity {
 
         if (!username.matches("[a-zA-Z]*")) {
             error += "username has some special characters";
+            isValid = false;
         }
 
         return isValid;

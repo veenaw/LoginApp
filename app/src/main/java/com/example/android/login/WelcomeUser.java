@@ -1,7 +1,8 @@
 package com.example.android.login;
 
-import android.support.v7.app.AppCompatActivity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
 public class WelcomeUser extends AppCompatActivity {
@@ -13,7 +14,9 @@ public class WelcomeUser extends AppCompatActivity {
     }
 
     public void logMeOut(View view) {
-        android.os.Process.killProcess(android.os.Process.myPid());
-        System.exit(1);
+        Intent intent = new Intent(Intent.ACTION_MAIN);
+        intent.addCategory(Intent.CATEGORY_HOME);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(intent);
     }
 }
