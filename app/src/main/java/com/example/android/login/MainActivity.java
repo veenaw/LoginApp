@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -21,7 +20,6 @@ public class MainActivity extends AppCompatActivity {
         final EditText uname = (EditText) findViewById(R.id.username_text);
         final EditText passwd = (EditText) findViewById(R.id.password_text);
 
-        final Button loginButton = (Button) findViewById(R.id.login_button);
         String error = "";
 
         assert uname != null;
@@ -38,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
                 uname.setText("");
                 passwd.setText("");
                 // display toast message username and password don't match
-                String str1 = "usename:" + passwd.getText().toString() + "and password:" + uname.getText().toString() + "don't match";
+                String str1 = "username:" + passwd.getText().toString() + "and password:" + uname.getText().toString() + "don't match";
                 Toast.makeText(MainActivity.this, str1,
                         Toast.LENGTH_SHORT).show();
             }
@@ -60,17 +58,17 @@ public class MainActivity extends AppCompatActivity {
         int length = username.length();
         boolean isValid = true;
         if (length < 8) {
-            error += "username length is less than 8";
+            error += "Username length is less than 8";
             isValid = false;
         }
 
         if (length > 12) {
-            error += "username length is greater than 12";
+            error += "Username length is greater than 12";
             isValid = false;
         }
 
         if (!username.matches("[a-zA-Z]*")) {
-            error += "username has some special characters";
+            error += "Username has some special characters";
             isValid = false;
         }
 
